@@ -32,6 +32,11 @@ return [
 
     'openweather' => [
         'apiKey' => env('OPENWEATHER_KEY'),
+        'cache' => [
+            'driver' => env('OPENWEATHER_CACHE_DRIVER', 'redis'),
+            'enabled' => env('OPENWEATHER_CACHE_ENABLED', true),
+            'ttl' => env('OPENWEATHER_CACHE_TTL', 60),
+        ],
     ],
 
     'places' => [
