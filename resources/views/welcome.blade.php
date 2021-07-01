@@ -8,6 +8,7 @@
     <link rel="preload" as="image" href="/images/icons/loading.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    @include('partials.icons')
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0" defer></script>
