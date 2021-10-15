@@ -17,7 +17,8 @@ mix
 	.vue({version: 2, extractStyles: false})
 	.postCss('resources/css/app.css', 'public/css', [
 		require('postcss-import'),
-		require('tailwindcss')(),
+        require('tailwindcss'),
+        require('autoprefixer'),
 	])
 	.extract();
 

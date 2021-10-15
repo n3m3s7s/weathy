@@ -1,22 +1,28 @@
-const path = require('path')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: [
-    path.join(__dirname, 'resources/views/**/*.php'),
-    path.join(__dirname, 'resources/js/components/**/*.vue'),
+    "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+    "./storage/framework/views/*.php",
+    "./resources/views/**/*.blade.php",
+    "./resources/js/components/**/*.vue"
   ],
+
   theme: {
-    fontFamily: {
-      'sans': ['Ubuntu', 'ui-sans-serif', 'system-ui'],
-      'serif': ['Ubuntu', 'ui-serif', 'Georgia'],
-      'mono': ['Ubuntu', 'ui-monospace', 'SFMono-Regular'],
-    },
     extend: {
-      spacing: {
-        '128': '32rems'
+      fontFamily: {
+        sans: ["Ubuntu", "ui-sans-serif", "system-ui"],
+        serif: ["Ubuntu", "ui-serif", "Georgia"],
+        mono: ["Ubuntu", "ui-monospace", "SFMono-Regular"]
       }
-    },
+    }
   },
-  variants: {},
-  plugins: [],
-}
+
+  variants: {
+    extend: {
+      opacity: ["disabled"]
+    }
+  },
+
+  plugins: [require("@tailwindcss/forms")]
+};
